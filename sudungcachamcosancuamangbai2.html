@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function addMinuss() {
+        let enterNumber = prompt("Enter the Number:")
+        let arr = enterNumber.split("");
+        console.log(arr);
+        let arrNew = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0 && arr[i - 1] % 2 == 0) {
+                arrNew.push("-", arr[i]);
+            } else {
+                arrNew.push(arr[i]);
+            }
+        }
+        let result = "";
+        for (let i =0; i< arrNew.length; i++){
+            result += arrNew[i];
+        }
+        alert(result);
+    }
+
+    addMinuss();
+</script>
+</body>
+</html>
